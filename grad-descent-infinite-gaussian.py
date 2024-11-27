@@ -71,7 +71,7 @@ def initialize_optimizer():
     y_max = Y_search[max_index]
 
     # add a small perturbation to avoid zero gradient
-    perturbation = np.random.uniform(-1.0, 1.0, size=2)
+    perturbation = np.random.uniform(-0.1, 0.1, size=2)
     x0 = np.array([x_max, y_max]) + perturbation
 
     # clip x0 to stay within bounds
